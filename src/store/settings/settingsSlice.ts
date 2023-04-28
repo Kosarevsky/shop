@@ -1,24 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { ThemeNameType, ThemeType } from "../../theme/themes";
 
 interface SettingsStateType {
     language: LanguageType;
     theme: ThemeType;
     themeName: ThemeNameType;
 }
-
-enum LanguagesType {
+enum LanguageType {
     EN = "en",
     RU = "ru",
     PL = "pl",
 }
 
-const getInitialState = () => {
-    let language = localStorage.getItem("language") as LanguagesType;
 
-    if (!Object.values(LanguagesType).includes(language)) {
-        language = LanguagesType.EN;
+
+const getInitialState = () => {
+    let language = localStorage.getItem("language") as LanguageType;
+    if (!Object.values(LanguageType).includes(language)) {
+        language = LanguageType.EN;
     }
 
+    let themeName = localStorage.getItem("themeName") as ThemeNameType;
+    if (!themeNames.includes(themeName)) {
+    }
     return { language };
 };
 
