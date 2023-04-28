@@ -1,6 +1,6 @@
 export enum ThemeNameType {
-    dark,
-    light,
+    dark = "dark",
+    light = "light"
 }
 
 export interface ThemeType {

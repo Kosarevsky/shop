@@ -1,17 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { ThemeNameType, ThemeType } from "../../theme/themes";
+import { ThemeNameType, ThemeType, darkTheme, lightTheme } from "../../theme/themes";
 
 interface SettingsStateType {
     language: LanguageType;
     theme: ThemeType;
     themeName: ThemeNameType;
 }
-enum LanguageType {
+export enum LanguageType {
     EN = "en",
     RU = "ru",
     PL = "pl",
 }
-
 
 
 const getInitialState = () => {
@@ -21,9 +20,16 @@ const getInitialState = () => {
     }
 
     let themeName = localStorage.getItem("themeName") as ThemeNameType;
-    if (!themeNames.includes(themeName)) {
+    if (!Object.values(ThemeNameType).includes(themeName)) {
+        themeName = ThemeNameType.dark;
     }
-    return { language };
+
+    const theme = themeName === ThemeNameType.dark? lightTheme : darkTheme;
+
+    // console.log(123,language);
+    // console.log(456, theme);
+    // console.log(789,themeName);
+    return { language, theme , themeName};
 };
 
 const settingsSlice = createSlice({

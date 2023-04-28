@@ -6,11 +6,14 @@ import ShopWrapper from "./shopWrapper/ShopWrapper.styled";
 import Header from "./header/Header";
 import { useAppSelector } from "../store/store";
 
-function App() {
+const App: React.FC = () => {
     const theme = useAppSelector((state) => state.settings.theme);
 
+    //console.log(theme)
     return (
-        <ThemeProvider theme={theme}>
+        //<ThemeProvider theme={theme}>
+        <>
+            {/* <ThemeProvider theme={theme}> */}
             <Header />
             <ShopWrapper>
                 <Routes>
@@ -21,7 +24,8 @@ function App() {
                     ></Route>
                 </Routes>
             </ShopWrapper>
-        </ThemeProvider>
+            {/* </ThemeProvider> */}
+        </>
     );
 }
 
