@@ -5,9 +5,9 @@ const S = {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-right: 40px;
-        /* background-color: ${({ theme }) => theme.background}; */
-        /* color: ${({ theme }) => theme.color}; */
+        padding-right: 30px;
+        background-color: "aqua";
+        color: ${({ theme }) => theme.background};
     `,
     logo: styled.div``,
     logoImg: styled.img`
