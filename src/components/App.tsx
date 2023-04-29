@@ -5,7 +5,8 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import ShopWrapper from "./shopWrapper/ShopWrapper.styled";
 import Header from "./header/Header";
 import { useAppSelector } from "../store/store";
-import { GlobalStyles } from "./GlobalStyles";
+import { GlobalStyles } from "./globalStyles";
+
 
 const App: React.FC = () => {
     const theme = useAppSelector((state) => state.settings.theme);

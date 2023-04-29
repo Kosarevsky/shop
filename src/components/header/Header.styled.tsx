@@ -6,8 +6,8 @@ const S = {
         align-items: center;
         justify-content: space-between;
         padding-right: 30px;
-        background-color: "aqua";
-        color: ${({ theme }) => theme.background};
+        background-color: ${({theme})=> theme.header.backgroundColor};
+        color: ${({ theme }) => theme.body};
     `,
     logo: styled.div``,
     logoImg: styled.img`

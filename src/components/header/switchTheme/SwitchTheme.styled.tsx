@@ -9,14 +9,14 @@ const S = {
     MdWbSunny: styled(MdWbSunny)`
         width: 18px;
         height: 18px;
-        color: ${({ theme }) => theme.text};
-        background-color: ${({ theme }) => theme.background};
+        color: ${({ theme }) => theme.header.color};
+        background-color: ${({ theme }) => theme.header.backgroundColor};
     `,
     MdDarkMode: styled(MdDarkMode)`
         width: 18px;
         height: 18px;
-        color: ${({ theme }) => theme.text};
-        background-color: ${({ theme }) => theme.background};
+        color: ${({ theme }) => theme.header.color};
+        background-color: ${({ theme }) => theme.header.backgroundColor};
     `,
 };
 

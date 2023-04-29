@@ -12,7 +12,6 @@ const Header: React.FC = () => {
             </S.logo>
             <S.center>center</S.center>
             <S.right>
-                right
                 <SwitchTheme />
             </S.right>
         </S.container>

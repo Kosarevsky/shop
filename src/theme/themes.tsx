@@ -11,19 +11,31 @@ export interface ThemeType {
     body: string;
     text: string;
     toggleBorder: string;
-    background: string;
+    backgroundColor: string;
+    header: {
+        color: string;
+        backgroundColor: string;
+    }
 }
 
 export const lightTheme: ThemeType = {
     body: "#FFF",
     text: "#363537",
     toggleBorder: "#FFF",
-    background: "#276E9A",
+    backgroundColor: "#276E9A",
+    header:{
+        color: "#FFF",
+        backgroundColor: "#1f2937",
+    }
 };
 
 export const darkTheme: ThemeType = {
     body: "#363537",
     text: "#FAFAFA",
     toggleBorder: "#6B8096",
-    background: "#276E9A",
+    backgroundColor: "#276E9A",
+    header:{
+        color: "#FFF",
+        backgroundColor: "#1f2937",
+    }
 };
