@@ -5,20 +5,17 @@ import {
     darkTheme,
     lightTheme,
 } from "../../theme/themes";
+import { LanguageType } from "../../types/languageType";
+import i18n from "../../utils/i18n/config";
 
 interface SettingsStateType {
     language: LanguageType;
     theme: ThemeType;
     themeName: ThemeNameType;
 }
-export enum LanguageType {
-    EN = "en",
-    RU = "ru",
-    PL = "pl",
-}
 
 const getInitialState = (): SettingsStateType => {
-    let language = localStorage.getItem("language") as LanguageType;
+    let language = localStorage.getItem("i18nextLng") as LanguageType;
     if (!Object.values(LanguageType).includes(language)) {
         language = LanguageType.EN;
     }
@@ -39,7 +36,8 @@ const settingsSlice = createSlice({
     reducers: {
         changeLanguage: (state, action) => {
             state.language = action.payload;
-            localStorage.setItem("language", state.language);
+            localStorage.setItem("i18nextLng", action.payload);
+            i18n.changeLanguage(action.payload);
         },
         toggleTheme: (state) => {
             if (state.themeName === ThemeNameType.light) {
