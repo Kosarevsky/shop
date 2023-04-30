@@ -4,7 +4,7 @@ import { StyledLogin } from './LogUser.styled';
 const LogUser: React.FC = () => {
     return (
         <div>
-            <StyledLogin />
+            <StyledLogin  />
         </div>
     );
 };

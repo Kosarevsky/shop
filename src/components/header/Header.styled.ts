@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const S = {
@@ -21,6 +22,10 @@ const S = {
         display: flex;
         align-items: center;
     `,
+    link:styled(NavLink)`
+        cursor: pointer;
+        color: #fff;
+    `
 };
 
 export default S;

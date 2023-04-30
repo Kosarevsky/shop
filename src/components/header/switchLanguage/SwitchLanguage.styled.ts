@@ -3,6 +3,9 @@ import styled from "styled-components";
 
 const StyledSelect = styled(Select)`
     && {
+        padding-right: 1rem;
+        margin-left: 2rem;
+
         color: ${({ theme }) => theme.header.color};
         .MuiOutlinedInput-notchedOutline {
             border-width: 1px !important;

@@ -15,7 +15,10 @@ const Header: React.FC = () => {
             <S.center>center</S.center>
             <S.right>
                 <SwitchTheme />
-                <LogUser />
+                <S.link to="/login">
+                    <LogUser />
+                </S.link>
+
                 <SwitchLanguage />
             </S.right>
         </S.container>
