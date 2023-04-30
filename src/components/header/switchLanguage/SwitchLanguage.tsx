@@ -3,17 +3,14 @@ import { settingsAction } from "../../../store/settings/settingsSlice";
 import { FormControl, InputLabel, MenuItem } from "@mui/material";
 import StyledSelect from "./SwitchLanguage.styled";
 import { LanguageType } from "../../../types/languageType";
-import { useTranslation } from "react-i18next";
 import { SelectChangeEvent } from "@mui/material";
-import '../../../utils/i18n/config'
 import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const SwitchLanguage = () => {
     const { i18n } = useTranslation();
-
     const dispatch = useAppDispatch();
     const language = useAppSelector((state) => state.settings.language);
-
 
     const changeLanguage = (e: SelectChangeEvent<unknown>) => {
         i18n.changeLanguage(e.target.value as string);
@@ -22,9 +19,6 @@ const SwitchLanguage = () => {
 
     return (
         <div>
-            <div><h1>{t("title")}</h1></div>
-            <div>{t("description.part1")}</div>
-            <div>{t("description.part2")}</div>
             <FormControl sx={{ m: 1, minWidth: 80 }}>
                 <InputLabel id="switch-language-select-autowidth-label">
                     lng

@@ -6,7 +6,7 @@ import {
     lightTheme,
 } from "../../theme/themes";
 import { LanguageType } from "../../types/languageType";
-import i18n from "../../utils/i18n/config";
+import i18n from "../../utils/i18nConfig";
 
 interface SettingsStateType {
     language: LanguageType;

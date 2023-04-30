@@ -2,13 +2,11 @@ import React from "react";
 import S from "./Header.styled";
 import SwitchTheme from "./switchTheme/SwitchTheme";
 import SwitchLanguage from "./switchLanguage/SwitchLanguage";
-import { useTranslation } from 'react-i18next';
+import LogUser from "./logUser/LogUser";
 
 const logo = require("../../assets/img/logo.png");
 
 const Header: React.FC = () => {
-    const { t } = useTranslation();
-    console.log(t("header.about"));
     return (
         <S.container>
             <S.logo>
@@ -17,6 +15,7 @@ const Header: React.FC = () => {
             <S.center>center</S.center>
             <S.right>
                 <SwitchTheme />
+                <LogUser />
                 <SwitchLanguage />
             </S.right>
         </S.container>

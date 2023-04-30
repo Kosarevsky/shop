@@ -6,28 +6,30 @@ import ShopWrapper from "./shopWrapper/ShopWrapper.styled";
 import Header from "./header/Header";
 import { useAppSelector } from "../store/store";
 import { GlobalStyles } from "./GlobalStyles";
+import { I18nextProvider, useTranslation } from "react-i18next";
 
 const App: React.FC = () => {
     const theme = useAppSelector((state) => state.settings.theme);
-
-    console.log(theme);
+    const { i18n } = useTranslation();
     return (
         <>
-            <ThemeProvider theme={theme}>
-                <GlobalStyles />
-                <BrowserRouter>
-                    <Header />
-                    <ShopWrapper>
-                        <Routes>
-                            <Route path="/" element={<HomePage />}></Route>
-                            <Route
-                                path="/favourites"
-                                element={<FavouritesPage />}
-                            ></Route>
-                        </Routes>
-                    </ShopWrapper>
-                </BrowserRouter>
-            </ThemeProvider>
+            <I18nextProvider i18n={i18n}>
+                <ThemeProvider theme={theme}>
+                    <GlobalStyles />
+                    <BrowserRouter>
+                        <Header />
+                        <ShopWrapper>
+                            <Routes>
+                                <Route path="/" element={<HomePage />}></Route>
+                                <Route
+                                    path="/favourites"
+                                    element={<FavouritesPage />}
+                                ></Route>
+                            </Routes>
+                        </ShopWrapper>
+                    </BrowserRouter>
+                </ThemeProvider>
+            </I18nextProvider>
         </>
     );
 };
