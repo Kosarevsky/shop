@@ -17,7 +17,7 @@ export enum LanguageType {
     PL = "pl",
 }
 
-const getInitialState = () : SettingsStateType => {
+const getInitialState = (): SettingsStateType => {
     let language = localStorage.getItem("language") as LanguageType;
     if (!Object.values(LanguageType).includes(language)) {
         language = LanguageType.EN;
@@ -42,11 +42,11 @@ const settingsSlice = createSlice({
             localStorage.setItem("language", state.language);
         },
         toggleTheme: (state) => {
-            if (state.themeName === ThemeNameType.light){
-                state.themeName = ThemeNameType.dark
+            if (state.themeName === ThemeNameType.light) {
+                state.themeName = ThemeNameType.dark;
                 state.theme = darkTheme;
             } else {
-                state.themeName = ThemeNameType.light
+                state.themeName = ThemeNameType.light;
                 state.theme = lightTheme;
             }
             localStorage.setItem("themeName", state.themeName);

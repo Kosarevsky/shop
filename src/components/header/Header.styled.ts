@@ -6,7 +6,7 @@ const S = {
         align-items: center;
         justify-content: space-between;
         padding-right: 30px;
-        background-color: ${({theme})=> theme.header.backgroundColor};
+        background-color: ${({ theme }) => theme.header.backgroundColor};
         color: ${({ theme }) => theme.body};
     `,
     logo: styled.div``,
@@ -18,6 +18,7 @@ const S = {
         align-items: center;
     `,
     right: styled.div`
+        display: flex;
         align-items: center;
     `,
 };

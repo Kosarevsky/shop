@@ -7,7 +7,9 @@ import { ThemeNameType } from "../../../theme/themes";
 
 const SwitchTheme: React.FC = () => {
     const dispatch = useAppDispatch();
-    const isDarkTheme = useAppSelector((state => state.settings.themeName===ThemeNameType.dark))
+    const isDarkTheme = useAppSelector(
+        (state) => state.settings.themeName === ThemeNameType.dark
+    );
     const handleToggleTheme = () => {
         dispatch(settingsAction.toggleTheme());
     };
@@ -15,7 +17,11 @@ const SwitchTheme: React.FC = () => {
     return (
         <S.container>
             <S.MdWbSunny />
-            <Switch checked={isDarkTheme} onClick={handleToggleTheme} defaultChecked color="default" />
+            <Switch
+                checked={isDarkTheme}
+                onClick={handleToggleTheme}
+                color="default"
+            />
             <S.MdDarkMode />
         </S.container>
     );

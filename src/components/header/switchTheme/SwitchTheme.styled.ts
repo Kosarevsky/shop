@@ -5,6 +5,7 @@ const S = {
     container: styled.div`
         display: flex;
         align-items: center;
+        padding-right: 2rem;
     `,
     MdWbSunny: styled(MdWbSunny)`
         width: 18px;
