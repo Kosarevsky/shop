@@ -2,7 +2,7 @@ import React from "react";
 import S from "./Header.styled";
 import SwitchTheme from "./switchTheme/SwitchTheme";
 import SwitchLanguage from "./switchLanguage/SwitchLanguage";
-import LogUser from "./logUser/LogUser";
+import LogUser from "./login/Login";
 
 const logo = require("../../assets/img/logo.png");
 
@@ -16,9 +16,7 @@ const Header: React.FC = () => {
                 <S.center>center</S.center>
                 <S.right>
                     <SwitchTheme />
-                    <S.link to="/login">
                         <LogUser />
-                    </S.link>
                     <SwitchLanguage />
                 </S.right>
             </S.container>

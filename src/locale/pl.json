@@ -1,7 +1,7 @@
 {
-    "title": "Internationalizing with i18next",
+    "title": "Internacjonalizacja z i18next",
     "description": {
-      "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
-      "part2": "Switch language between english and russian using buttons above."
+      "part1": "Aby rozpocząć, edytuj plik App.js i zapisz go, aby ponownie załadować.",
+      "part2": "Przełączaj język między angielskim a rosyjskim za pomocą przycisków powyżej."
     }
   }

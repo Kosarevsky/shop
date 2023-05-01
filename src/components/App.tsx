@@ -18,6 +18,7 @@ const App: React.FC = () => {
                     <GlobalStyles />
                     <BrowserRouter>
                         <Header />
+                        <HomePage></HomePage>
                         <ShopWrapper>
                             <Routes>
                                 <Route path="/" element={<HomePage />}></Route>

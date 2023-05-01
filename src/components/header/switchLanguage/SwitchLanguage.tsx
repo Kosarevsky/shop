@@ -20,7 +20,7 @@ const SwitchLanguage = () => {
         <div>
             <FormControl sx={{ m: 1, minWidth: 80 }}>
                 <InputLabel id="switch-language-select-autowidth-label">
-                    language
+                    lng
                 </InputLabel>
                 <StyledSelect
                     labelId="switch-language-select-autowidth-label"

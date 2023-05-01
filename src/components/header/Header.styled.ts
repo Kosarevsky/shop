@@ -13,13 +13,16 @@ const S = {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        //padding-right: 30px;
         color: ${({ theme }) => theme.body};
-        @media ${device.desktop} {
-            width: 1400px;
-        }
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        width: 100%;
+        max-width: 100%;
         @media ${device.laptop} {
-            width: 800px;
+            max-width: 800px;
+        }
+        @media ${device.desktop} {
+            max-width: 1280px;
         }
     `,
     logo: styled.div``,
