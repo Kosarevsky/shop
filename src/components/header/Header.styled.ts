@@ -1,14 +1,26 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { device } from "../../constant/device";
 
 const S = {
-    container: styled.header`
+    header: styled.header`
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: ${({ theme }) => theme.header.backgroundColor};
+    `,
+    container: styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-right: 30px;
-        background-color: ${({ theme }) => theme.header.backgroundColor};
+        //padding-right: 30px;
         color: ${({ theme }) => theme.body};
+        @media ${device.desktop} {
+            width: 1400px;
+        }
+        @media ${device.laptop} {
+            width: 800px;
+        }
     `,
     logo: styled.div``,
     logoImg: styled.img`

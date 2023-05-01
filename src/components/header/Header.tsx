@@ -3,14 +3,13 @@ import S from "./Header.styled";
 import SwitchTheme from "./switchTheme/SwitchTheme";
 import SwitchLanguage from "./switchLanguage/SwitchLanguage";
 import LogUser from "./logUser/LogUser";
-import ShopWrapperFlex from "../shopWrapper/ShopWrapperFlex.styled";
 
 const logo = require("../../assets/img/logo.png");
 
 const Header: React.FC = () => {
     return (
-        <S.container>
-            <ShopWrapperFlex>
+        <S.header>
+            <S.container>
                 <S.logo>
                     <S.logoImg alt="Logo" src={logo} />
                 </S.logo>
@@ -20,11 +19,10 @@ const Header: React.FC = () => {
                     <S.link to="/login">
                         <LogUser />
                     </S.link>
-
                     <SwitchLanguage />
                 </S.right>
-            </ShopWrapperFlex>
-        </S.container>
+            </S.container>
+        </S.header>
     );
 };
 
