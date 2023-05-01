@@ -1,12 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {
-    ThemeNameType,
-    ThemeType,
-    darkTheme,
-    lightTheme,
-} from "../../theme/themes";
+import { darkTheme, lightTheme } from "../../theme/themes";
 import { LanguageType } from "../../types/languageType";
 import i18n from "../../utils/i18nConfig";
+import { ThemeNameType } from "../../types/themeNameType";
+import { ThemeType } from "../../types/themeType";
 
 interface SettingsStateType {
     language: LanguageType;

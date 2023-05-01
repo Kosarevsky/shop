@@ -3,7 +3,7 @@ import S from "./SwitchTheme.styled";
 import Switch from "@mui/material/Switch";
 import { useAppDispatch, useAppSelector } from "../../../store/store";
 import { settingsAction } from "../../../store/settings/settingsSlice";
-import { ThemeNameType } from "../../../theme/themes";
+import { ThemeNameType } from "../../../types/themeNameType";
 
 const SwitchTheme: React.FC = () => {
     const dispatch = useAppDispatch();

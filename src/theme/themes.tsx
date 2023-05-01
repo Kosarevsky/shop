@@ -1,21 +1,7 @@
-export enum ThemeNameType {
-    dark = "dark",
-    light = "light",
-}
+import { ThemeType } from "../types/themeType";
 
 declare module "styled-components" {
     export interface DefaultTheme extends ThemeType {}
-}
-
-export interface ThemeType {
-    body: string;
-    text: string;
-    toggleBorder: string;
-    backgroundColor: string;
-    header: {
-        color: string;
-        backgroundColor: string;
-    }
 }
 
 export const lightTheme: ThemeType = {
@@ -23,10 +9,10 @@ export const lightTheme: ThemeType = {
     text: "#363537",
     toggleBorder: "#FFF",
     backgroundColor: "#276E9A",
-    header:{
+    header: {
         color: "#FFF",
         backgroundColor: "#1f2937",
-    }
+    },
 };
 
 export const darkTheme: ThemeType = {
@@ -34,8 +20,8 @@ export const darkTheme: ThemeType = {
     text: "#FAFAFA",
     toggleBorder: "#6B8096",
     backgroundColor: "#276E9A",
-    header:{
+    header: {
         color: "#FFF",
         backgroundColor: "#1f2937",
-    }
+    },
 };

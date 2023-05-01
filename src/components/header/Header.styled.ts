@@ -22,10 +22,10 @@ const S = {
         display: flex;
         align-items: center;
     `,
-    link:styled(NavLink)`
+    link: styled(NavLink)`
         cursor: pointer;
         color: #fff;
-    `
+    `,
 };
 
 export default S;

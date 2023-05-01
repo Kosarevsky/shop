@@ -21,7 +21,7 @@ const App: React.FC = () => {
                         <ShopWrapper>
                             <Routes>
                                 <Route path="/" element={<HomePage />}></Route>
-                                <Route path="/login" element={<LoginPage />}></Route>
+                                {/* <Route path="/login" element={<LoginPage />}></Route> */}
                                 <Route
                                     path="/favourites"
                                     element={<FavouritesPage />}

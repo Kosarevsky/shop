@@ -4,7 +4,6 @@ import { FormControl, InputLabel, MenuItem } from "@mui/material";
 import StyledSelect from "./SwitchLanguage.styled";
 import { LanguageType } from "../../../types/languageType";
 import { SelectChangeEvent } from "@mui/material";
-import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 
 const SwitchLanguage = () => {
@@ -21,7 +20,7 @@ const SwitchLanguage = () => {
         <div>
             <FormControl sx={{ m: 1, minWidth: 80 }}>
                 <InputLabel id="switch-language-select-autowidth-label">
-                    lng
+                    language
                 </InputLabel>
                 <StyledSelect
                     labelId="switch-language-select-autowidth-label"
