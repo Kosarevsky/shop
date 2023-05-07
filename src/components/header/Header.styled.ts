@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { device } from "../../constant/device";
+import { Login } from "@mui/icons-material";
 
 const S = {
     header: styled.header`
@@ -42,5 +43,15 @@ const S = {
         color: #fff;
     `,
 };
+
+export const StyledLogin = styled(Login)(({theme})=>({
+    color: theme.header.color,
+    height: "35px !important",
+    width: "35px !important",
+    margin: "0 2rem 0 0",
+    "&:hover": {
+        color: theme.header.color,
+    }
+}));
 
 export default S;

@@ -7,6 +7,7 @@ import Header from "./header/Header";
 import { useAppSelector } from "../store/store";
 import { GlobalStyles } from "./GlobalStyles";
 import { I18nextProvider, useTranslation } from "react-i18next";
+import Login from "./header/login/Login";
 
 const App: React.FC = () => {
     const theme = useAppSelector((state) => state.settings.theme);
@@ -18,11 +19,10 @@ const App: React.FC = () => {
                     <GlobalStyles />
                     <BrowserRouter>
                         <Header />
-                        <HomePage></HomePage>
                         <ShopWrapper>
                             <Routes>
                                 <Route path="/" element={<HomePage />}></Route>
-                                {/* <Route path="/login" element={<LoginPage />}></Route> */}
+                                <Route path="/login" element={<Login />}></Route>
                                 <Route
                                     path="/favourites"
                                     element={<FavouritesPage />}

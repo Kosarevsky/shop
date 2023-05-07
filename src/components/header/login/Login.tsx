@@ -1,15 +1,22 @@
 import React from 'react';
-import { StyledLogin } from './LogUser.styled';
-import S from '../Header.styled';
+import LoginView from './LoginView';
+import { TokenRequestType } from '../../../types/tokenRequestType';
+import { useAppDispatch, useAppSelector } from '../../../store/store';
+import { authActions } from '../../../store/settings/authSlice';
 
-const LogUser: React.FC = () => {
-    return (
-        <div>
-            <S.link to="/login">
-                <StyledLogin  />
-            </S.link>
-        </div>
-    );
+const LoginPage: React.FC = () => {
+  const dispatch = useAppDispatch();
+  const isLoading = useAppSelector((state) => state.auth.isLoading)
+  const error = useAppSelector((state) => state.auth.error)
+
+  const onSubmit = (data: TokenRequestType) => dispatch(authActions.createTokens(data))
+  return (
+    <LoginView
+      loading={isLoading}
+      error={error}
+      onSubmit={onSubmit}
+    />
+  );
 };
 
-export default LogUser;
+export default LoginPage;
