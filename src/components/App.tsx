@@ -8,6 +8,7 @@ import { useAppSelector } from "../store/store";
 import { GlobalStyles } from "./GlobalStyles";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import Login from "./header/login/Login";
+import CarouselComponent from "./carousel/Carousel";
 
 const App: React.FC = () => {
     const theme = useAppSelector((state) => state.settings.theme);
@@ -19,6 +20,7 @@ const App: React.FC = () => {
                     <GlobalStyles />
                     <BrowserRouter>
                         <Header />
+                        <CarouselComponent />
                         <ShopWrapper>
                             <Routes>
                                 <Route path="/" element={<HomePage />}></Route>
@@ -31,7 +33,7 @@ const App: React.FC = () => {
                         </ShopWrapper>
                     </BrowserRouter>
                 </ThemeProvider>
-            </I18nextProvider>
+            </I18nextProvider >
         </>
     );
 };
