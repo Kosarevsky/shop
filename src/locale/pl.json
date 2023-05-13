@@ -3,5 +3,19 @@
     "description": {
       "part1": "Aby rozpocząć, edytuj plik App.js i zapisz go, aby ponownie załadować.",
       "part2": "Przełączaj język między angielskim a rosyjskim za pomocą przycisków powyżej."
+    },
+    "carousel": {
+      "slide_one": {
+        "title": "Świeża ryba z oceanów,",
+        "text": "Dostawa prosto do domu."
+      },
+      "slide_two": {
+        "title": "Wysokiej jakości ryby codziennie,",
+        "text": "Zamawiaj i ciesz się smakiem."
+      },
+      "slide_three": {
+        "title": "Nic nie smakuje lepiej niż wędkowanie,",
+        "text": "Ale oferujemy darmową dostawę."
+      }
     }
   }
