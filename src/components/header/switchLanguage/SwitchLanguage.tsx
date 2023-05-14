@@ -4,10 +4,9 @@ import { FormControl, InputLabel, MenuItem } from "@mui/material";
 import StyledSelect from "./SwitchLanguage.styled";
 import { LanguageType } from "../../../types/languageType";
 import { SelectChangeEvent } from "@mui/material";
-import { useTranslation } from "react-i18next";
+import i18n from "../../../utils/i18nConfig";
 
 const SwitchLanguage = () => {
-    const { i18n } = useTranslation();
     const dispatch = useAppDispatch();
     const language = useAppSelector((state) => state.settings.language);
 

@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { darkTheme, lightTheme } from "../../theme/themes";
 import { LanguageType } from "../../types/languageType";
-import i18n from "../../utils/i18nConfig";
 import { ThemeNameType } from "../../types/themeNameType";
 import { ThemeType } from "../../types/themeType";
 
@@ -34,7 +33,7 @@ const settingsSlice = createSlice({
         changeLanguage: (state, action) => {
             state.language = action.payload;
             localStorage.setItem("i18nextLng", action.payload);
-            i18n.changeLanguage(action.payload);
+            // i18n.changeLanguage(action.payload);
         },
         toggleTheme: (state) => {
             if (state.themeName === ThemeNameType.light) {
