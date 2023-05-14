@@ -9,7 +9,9 @@ interface PropsType {
 const CategoryCard: React.FC<PropsType> = ({ dataItem }) => {
     return (
         <S.container>
-            {dataItem.visibleName}
+            <S.content>
+                {dataItem.visibleName}
+            </S.content>
         </S.container>
     );
 };
