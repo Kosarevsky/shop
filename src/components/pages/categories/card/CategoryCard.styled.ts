@@ -13,11 +13,12 @@ const S = {
         width: 30%;
         height: 200px;
         cursor: pointer;
+        border: 1px solid;
     `,
     content: styled.div`
         background-color: ${({ theme }) => `${theme.backgroundColor}80`};
         color: white;
-        padding: 20px;
+        padding: 20px 40px;
     `,
 };
 
