@@ -12,6 +12,7 @@ const S = {
         /* height: 80%; */
         width: 30%;
         height: 200px;
+        cursor: pointer;
     `,
     content: styled.div`
         background-color: ${({ theme }) => `${theme.backgroundColor}80`};

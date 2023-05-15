@@ -14,7 +14,7 @@ const Categories: React.FC = () => {
     }, [])
 
     return (
-        <S.container>
+        <S.container >
             {isLoading ? (
                 <div>Loading...</div>
             ) : (
