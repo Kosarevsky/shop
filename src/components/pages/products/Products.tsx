@@ -11,7 +11,7 @@ const Products: React.FC = () => {
     const isLoading = useAppSelector((state) => state.products.isLoading)
     const dispatch = useAppDispatch()
     const [sortField, setSortField] = useState("id");
-    const [sortDir, setSortDir] = useState("desc");
+    const [sortDir, setSortDir] = useState("asc");
     const [page, setPage] = useState(1);
     const [query, setQuery] = useState("");
 

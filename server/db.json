@@ -56,19 +56,19 @@
         {
             "id": 1,
             "title": "Luxury furniture",
-            "price": 19999,
+            "price": 20,
             "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
             "categoryId": 1,
             "images": [
-                "https://www.iguides.ru/upload/medialibrary/471/4719e79f32db53ea4db110217c00fcdf.jpeg",
                 "https://braun-russia.ru/image/cache/data/products/oralb/mickey-pc500/mickey500-3-1000x1000.jpg",
+                "https://www.iguides.ru/upload/medialibrary/471/4719e79f32db53ea4db110217c00fcdf.jpeg",
                 "https://www.ochkov.net/wiki/storage/app/media/1./luchshie-elektricheskie-zvukovye-zubnye-shetki/1.jpg"
             ]
         },
         {
             "id": 2,
             "title": "Luxury furniture",
-            "price": 19999,
+            "price": 21,
             "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
             "categoryId": 1,
             "images": [
@@ -80,19 +80,19 @@
         {
             "id": 3,
             "title": "Luxury furniture",
-            "price": 19999,
+            "price": 17,
             "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
             "categoryId": 1,
             "images": [
+                "https://www.meleon.ru/upload/iblock/cd7/4-_1_.jpg",
                 "https://braun-russia.ru/image/cache/data/products/oralb/mickey-pc500/mickey500-3-1000x1000.jpg",
-                "https://www.ochkov.net/wiki/storage/app/media/1./luchshie-elektricheskie-zvukovye-zubnye-shetki/1.jpg",
-                "https://www.meleon.ru/upload/iblock/cd7/4-_1_.jpg"
+                "https://www.ochkov.net/wiki/storage/app/media/1./luchshie-elektricheskie-zvukovye-zubnye-shetki/1.jpg"
             ]
         },
         {
             "id": 4,
             "title": "Luxury furniture",
-            "price": 19999,
+            "price": 19.6,
             "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
             "categoryId": 1,
             "images": [
@@ -104,7 +104,7 @@
         {
             "id": 5,
             "title": "Luxury furniture",
-            "price": 19999,
+            "price": 34.9,
             "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
             "categoryId": 1,
             "images": [
@@ -116,7 +116,7 @@
         {
             "id": 6,
             "title": "Luxury furniture",
-            "price": 19999,
+            "price": 13.9,
             "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
             "categoryId": 1,
             "images": [
@@ -128,7 +128,7 @@
         {
             "id": 7,
             "title": "Luxury furniture",
-            "price": 19999,
+            "price": 35,
             "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
             "categoryId": 1,
             "images": [
@@ -140,7 +140,7 @@
         {
             "id": 8,
             "title": "Luxury furniture",
-            "price": 19999,
+            "price": 89.4,
             "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
             "categoryId": 1,
             "images": [
@@ -152,7 +152,7 @@
         {
             "id": 9,
             "title": "Luxury furniture",
-            "price": 19999,
+            "price": 78,
             "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
             "categoryId": 1,
             "images": [
@@ -164,7 +164,7 @@
         {
             "id": 10,
             "title": "Luxury furniture",
-            "price": 19999,
+            "price": 45.7,
             "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
             "categoryId": 1,
             "images": [
@@ -176,7 +176,7 @@
         {
             "id": 11,
             "title": "Luxury furniture",
-            "price": 19999,
+            "price": 12.8,
             "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
             "categoryId": 2,
             "images": [
