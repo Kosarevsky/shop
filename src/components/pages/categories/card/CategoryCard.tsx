@@ -11,12 +11,12 @@ const CategoryCard: React.FC<PropsType> = ({ dataItem }) => {
 
     const navigate = useNavigate()
     const handleClick = () => {
-        navigate(`/category/${dataItem.id}`)
+        navigate('/products/');
+        // navigate(`/products/${dataItem.id}`)
     }
 
-
     return (
-        <S.container onClick={handleClick}>
+        <S.container img={dataItem.image} onClick={handleClick}>
             <S.content>
                 {dataItem.visibleName}
             </S.content>

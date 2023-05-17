@@ -7,10 +7,6 @@ export const HomePage = () => {
     return <div>
         <CarouselComponent />
         <Categories />
-
-        <div><h1>{t("title")}</h1></div>
-        <div>{t("description.part1")}</div>
-        <div>{t("description.part2")}</div>
     </div>;
 };
 

@@ -1,19 +1,22 @@
 import styled from "styled-components";
 
+interface IProps {
+    img: string;
+}
+
 const S = {
-    container: styled.div`
-        /* position: absolute; */
-        /* top: 50%; */
-        /* transform: translate(-50%, -50%); */
+    container: styled.div<IProps>`
         display: flex;
-        /* flex-direction: column; */
         align-items: center;
         justify-content: center;
-        /* height: 80%; */
         width: 30%;
         height: 200px;
         cursor: pointer;
         border: 1px solid;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: ${({ img }) => `url(${img})`};
     `,
     content: styled.div`
         background-color: ${({ theme }) => `${theme.backgroundColor}80`};

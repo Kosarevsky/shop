@@ -1,13 +1,14 @@
 import FavouritesPage from "./FavouritesPage";
 import { HomePage } from "./HomePage";
 import { ThemeProvider } from "styled-components";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import ShopWrapper from "./shopWrapper/ShopWrapper.styled";
 import Header from "./header/Header";
 import { useAppSelector } from "../store/store";
 import { GlobalStyles } from "./GlobalStyles";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import Login from "./header/login/Login";
+import Products from "./pages/products/Products";
 
 const App: React.FC = () => {
     const theme = useAppSelector((state) => state.settings.theme);
@@ -23,10 +24,12 @@ const App: React.FC = () => {
                             <Routes>
                                 <Route path="/" element={<HomePage />}></Route>
                                 <Route path="/login" element={<Login />}></Route>
-                                <Route
-                                    path="/favourites"
-                                    element={<FavouritesPage />}
+                                <Route path="/products" element={<Products />}></Route >
+                                {/* TODO need configure /category:id */}
+                                <Route path="/category/:id" element={<Login />}></Route>
+                                <Route path="/favourites" element={<FavouritesPage />}
                                 ></Route>
+                                <Route path="*" element={<Navigate to="/" replace />} />
                             </Routes>
                         </ShopWrapper>
                     </BrowserRouter>
