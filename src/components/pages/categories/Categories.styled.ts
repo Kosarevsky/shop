@@ -10,8 +10,8 @@ const S = {
         grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
         gap: 10px;
         justify-items: center;
-        @media ${device.mobileL} {
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        @media ${device.mobileM} {
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         }
     `,
 };

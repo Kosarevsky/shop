@@ -23,8 +23,8 @@ const S = {
         background-size: cover;
         background-position: center;
         background-image: ${({ img }) => `url(${img})`};
-        @media ${device.mobileL} {
-            width: 240px;
+        @media ${device.mobileM} {
+            width: 280px;
         }
     `,
     content: styled.div`
