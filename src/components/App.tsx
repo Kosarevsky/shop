@@ -2,7 +2,6 @@ import FavouritesPage from "./FavouritesPage";
 import { HomePage } from "./HomePage";
 import { ThemeProvider } from "styled-components";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
-import ShopWrapper from "./shopWrapper/ShopWrapper.styled";
 import Header from "./header/Header";
 import { useAppSelector } from "../store/store";
 import { GlobalStyles } from "./GlobalStyles";
