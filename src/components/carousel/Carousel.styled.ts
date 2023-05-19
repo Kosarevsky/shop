@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../constant/device";
 
 interface IProps {
     left: number;
@@ -18,6 +19,12 @@ const S = {
         background-color: ${({ theme }) => `${theme.backgroundColor}80`};
         height: 80%;
         width: 40%;
+        @media ${device.tablet} {
+            font-size: 10px;
+        }
+        @media ${device.mobileL} {
+            font-size: 7px;
+        }
     `,
 };
 

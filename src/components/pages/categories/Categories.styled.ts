@@ -1,18 +1,17 @@
 import styled from "styled-components";
+import { device } from "../../../constant/device";
 
 const S = {
-    container: styled.div`
-        position: relative;
-        max-width: 1200px;
-        margin: 0 auto;
-    `,
+    container: styled.div``,
     list: styled.div`
-        display: flex;
-        justify-content: space-between;
-        /* align-items: stretch; */
-        flex-wrap: wrap;
-        gap: 24px;
-        padding: 24px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 10px;
+        justify-items: center;
+        position: relative;
+        @media ${device.mobileL} {
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        }
     `,
 };
 

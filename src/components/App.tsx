@@ -9,6 +9,7 @@ import { GlobalStyles } from "./GlobalStyles";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import Login from "./header/login/Login";
 import Products from "./pages/products/Products";
+import SubHeader from "./subHeader/SubHeader";
 
 const App: React.FC = () => {
     const theme = useAppSelector((state) => state.settings.theme);
@@ -20,18 +21,17 @@ const App: React.FC = () => {
                     <GlobalStyles />
                     <BrowserRouter>
                         <Header />
-                        <ShopWrapper>
-                            <Routes>
-                                <Route path="/" element={<HomePage />}></Route>
-                                <Route path="/login" element={<Login />}></Route>
-                                <Route path="/products" element={<Products />}></Route >
-                                {/* TODO need configure /category:id */}
-                                <Route path="/category/:id" element={<Login />}></Route>
-                                <Route path="/favourites" element={<FavouritesPage />}
-                                ></Route>
-                                <Route path="*" element={<Navigate to="/" replace />} />
-                            </Routes>
-                        </ShopWrapper>
+                        <SubHeader />
+                        <Routes>
+                            <Route path="/" element={<HomePage />}></Route>
+                            <Route path="/login" element={<Login />}></Route>
+                            <Route path="/products" element={<Products />}></Route >
+                            {/* TODO need configure /category:id */}
+                            <Route path="/category/:id" element={<Login />}></Route>
+                            <Route path="/favourites" element={<FavouritesPage />}
+                            ></Route>
+                            <Route path="*" element={<Navigate to="/" replace />} />
+                        </Routes>
                     </BrowserRouter>
                 </ThemeProvider>
             </I18nextProvider >

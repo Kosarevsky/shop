@@ -1,12 +1,14 @@
 import '../utils/i18nConfig'
-import { t } from "i18next";
 import CarouselComponent from './carousel/Carousel';
 import Categories from './pages/categories/Categories';
+import ShopWrapper from './shopWrapper/ShopWrapper.styled';
 
 export const HomePage = () => {
     return <div>
         <CarouselComponent />
-        <Categories />
+        <ShopWrapper>
+            <Categories />
+        </ShopWrapper>
     </div>;
 };
 

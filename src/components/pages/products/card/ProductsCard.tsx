@@ -9,9 +9,11 @@ interface IProductsPropsType {
 const ProductsCard: React.FC<IProductsPropsType> = ({ item }) => {
     return (
         <S.container>
-            <S.img
-                src={item.images[0].toString()}>
-            </S.img>
+            <S.containerContent>
+                <S.img
+                    src={item.images[0].toString()}>
+                </S.img>
+            </S.containerContent>
             <S.containerContent>
                 тут текст
             </S.containerContent>

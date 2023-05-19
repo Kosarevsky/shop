@@ -9,7 +9,7 @@ const S = {
         box-sizing: border-box;
         border-color: ${({ theme }) => theme.colors.grey[9]};
         outline: none !important;
-        
+
         &:hover {
             border-color: ${({ theme }) => theme.colors.grey[5]};
         }
@@ -23,9 +23,7 @@ const S = {
         height: 0;
         opacity: 0;
     `,
-    legend: styled.legend`
-
-    `,
+    legend: styled.legend``,
     input: styled.input`
         width: 100%;
         height: 30px;
@@ -34,6 +32,7 @@ const S = {
         top: -11px;
         background-color: transparent;
         outline: none;
+        color: ${({ theme }) => theme.colors.grey[9]};
         border: none;
     `,
     error: styled.div`

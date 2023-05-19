@@ -17,25 +17,23 @@ const SwitchLanguage = () => {
 
     return (
         <div>
-            <FormControl sx={{ m: 1, minWidth: 80 }}>
-                <InputLabel id="switch-language-select-autowidth-label">
-                    lng
-                </InputLabel>
-                <StyledSelect
-                    labelId="switch-language-select-autowidth-label"
-                    id="switch-language-select-autowidth"
-                    value={language}
-                    onChange={changeLanguage}
-                    autoWidth
-                    label="Age"
-                >
-                    {Object.values(LanguageType).map((item: string) => (
-                        <MenuItem key={item} value={item}>
-                            {item}
-                        </MenuItem>
-                    ))}
-                </StyledSelect>
-            </FormControl>
+            <InputLabel id="switch-language-select-autowidth-label">
+                lng
+            </InputLabel>
+            <StyledSelect
+                labelId="switch-language-select-autowidth-label"
+                id="switch-language-select-autowidth"
+                value={language}
+                onChange={changeLanguage}
+                autoWidth
+                label="Age"
+            >
+                {Object.values(LanguageType).map((item: string) => (
+                    <MenuItem key={item} value={item}>
+                        {item}
+                    </MenuItem>
+                ))}
+            </StyledSelect>
         </div>
     );
 };

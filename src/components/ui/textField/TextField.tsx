@@ -25,7 +25,7 @@ const TextField: React.FC<PropsType> = ({
 
 	return (
 		<S.container>
-        	<S.legend>
+			<S.legend>
 				{label}
 			</S.legend>
 			<label>
@@ -43,7 +43,7 @@ const TextField: React.FC<PropsType> = ({
 					{error}
 				</S.error>
 			)}
-        </S.container>
+		</S.container>
 	);
 }
 
