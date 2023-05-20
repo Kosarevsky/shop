@@ -17,7 +17,7 @@ const S = {
 
 export const StyledTextField = styled(TextField)`
     & label.Mui-focused {
-        color: ${({ theme }) => theme.text};
+        color: ${({ theme }) => theme.body};
     }
     & .MuiOutlinedInput-root {
         fieldset {
@@ -28,6 +28,9 @@ export const StyledTextField = styled(TextField)`
         }
         &.Mui-focused fieldset {
             border-color: ${({ theme }) => theme.text};
+        }
+        & input {
+            color: ${({ theme }) => theme.text};
         }
     }
 `;

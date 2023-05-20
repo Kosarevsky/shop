@@ -16,6 +16,9 @@
     "slide_three": {
       "title": "Вкуснее только рыбалка",
       "text": "Но мы предлагаем бесплатную доставку."
+    },
+    "subHeaderSearch": {
+      "resultSearchQuery": "Результаты для"
     }
   }
 }

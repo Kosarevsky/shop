@@ -1,21 +1,24 @@
 {
-    "title": "11Internationalizing with i18next",
-    "description": {
-      "part1": "To get started, edit App.js and save to reload.",
-      "part2": "Switch language between english and russian using buttons above."
+  "title": "11Internationalizing with i18next",
+  "description": {
+    "part1": "To get started, edit App.js and save to reload.",
+    "part2": "Switch language between english and russian using buttons above."
+  },
+  "carousel": {
+    "slide_one": {
+      "title": "Fresh fish from the oceans,",
+      "text": "Delivery right to your door."
     },
-    "carousel": {
-      "slide_one": {
-        "title": "Fresh fish from the oceans,",
-        "text": "Delivery right to your door."
-      },
-      "slide_two": {
-        "title": "Quality fish every day,",
-        "text": "Order and enjoy the taste."
-      },
-      "slide_three": {
-        "title": "Nothing's tastier than fishing,",
-        "text": "But we offer free delivery."
-      }
+    "slide_two": {
+      "title": "Quality fish every day,",
+      "text": "Order and enjoy the taste."
+    },
+    "slide_three": {
+      "title": "Nothing's tastier than fishing,",
+      "text": "But we offer free delivery."
     }
+  },
+  "subHeaderSearch": {
+    "resultSearchQuery": "Results for"
   }
+}

@@ -6,7 +6,13 @@ const getCategories = async () => {
 
     return axios<CategoryType[]>({
         method: "GET",
-        url: "http://localhost:3001/categories",
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "*",
+            "Access-Control-Allow-Credentials": "true",
+        },
+        // url: "http://localhost:3001/categories",
+        url: "https://kosarevsky-ideal-guacamole-jgqr6pq567q2p4jp-3000.preview.app.github.dev/categories",
     });
 };
 

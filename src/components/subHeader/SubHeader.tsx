@@ -6,6 +6,7 @@ import { FormControl, InputAdornment } from '@mui/material';
 import ParamsApiType from '../../types/paramsApiType';
 import { productsAction } from '../../store/products/products.Slice';
 import { useAppDispatch } from '../../store/store';
+import SubHeaderSearchingResult from './subHeaderSearchingResult/SubHeaderSearchingResult';
 
 const SubHeader = () => {
     const dispatch = useAppDispatch()
@@ -42,43 +43,44 @@ const SubHeader = () => {
     }, [debounceQuery]);
 
     return (
-        <div>
-            <ShopWrapper>
-                <S.container>
+        <ShopWrapper>
+            <S.container>
 
-                    <S.logo >
-                    </S.logo>
-                    <S.center>
-                    </S.center>
-                    <S.right>
-                        <FormControl>
-                            <StyledTextField
-                                size="small"
-                                variant="outlined"
-                                value={query}
-                                onChange={handleChange}
-                                InputProps={{
-                                    startAdornment: (
-                                        <InputAdornment position="start">
-                                            <StyledGoSearch />
-                                        </InputAdornment>
-                                    ),
-                                    endAdornment: (
-                                        <InputAdornment
-                                            position="end"
-                                            style={{ display: showClearIcon }}
-                                            onClick={handleClick}
-                                        >
-                                            <StyledMdClear />
-                                        </InputAdornment>
-                                    )
-                                }}
-                            />
-                        </FormControl>
-                    </S.right>
-                </S.container>
-            </ShopWrapper>
-        </div>
+                <S.logo >
+                </S.logo>
+                <S.center>
+                </S.center>
+                <S.right>
+                    <FormControl>
+                        <StyledTextField
+                            size="small"
+                            variant="outlined"
+                            value={query}
+                            onChange={handleChange}
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <StyledGoSearch />
+                                    </InputAdornment>
+                                ),
+                                endAdornment: (
+                                    <InputAdornment
+                                        position="end"
+                                        style={{ display: showClearIcon }}
+                                        onClick={handleClick}
+                                    >
+                                        <StyledMdClear />
+                                    </InputAdornment>
+                                )
+                            }}
+                        />
+                        <div>
+                            <SubHeaderSearchingResult searchText={query} />
+                        </div>
+                    </FormControl>
+                </S.right>
+            </S.container>
+        </ShopWrapper>
     );
 };
 
