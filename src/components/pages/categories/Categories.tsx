@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from '../../../store/store';
 import { categoryActions } from '../../../store/category/categorySlice';
 import S from './Categories.styled';
 import CategoryCard from './card/CategoryCard';
+import IsLoading from '../../ui/isLoadind/IsLoading';
 
 const Categories: React.FC = () => {
     const categories = useAppSelector((state) => state.categories.categories);
@@ -15,18 +16,19 @@ const Categories: React.FC = () => {
 
     return (
         <S.container >
-            {isLoading ? (
-                <div>Loading...</div>
-            ) : (
-                <S.list>
-                    {categories.filter(x => x.id >= 2).map((category) => (
-                        <CategoryCard
-                            key={category.id}
-                            dataItem={category}
-                        />
-                    ))}
-                </S.list>
-            )}
+            {isLoading ?
+                <IsLoading />
+                : (
+                    <S.list>
+                        {categories.filter(x => x.id >= 2).map((category) => (
+                            <CategoryCard
+                                key={category.id}
+                                dataItem={category}
+                            />
+                        ))}
+                    </S.list>
+                )
+            }
         </S.container>
     );
 };

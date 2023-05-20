@@ -31,7 +31,7 @@ const S = {
         display: grid;
         justify-content: center;
         align-items: center;
-        height: 350px;
+        //height: 350px;
     `,
 };
 

@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../../store/store';
 import { productsAction } from '../../../store/products/productsSlice';
 import ParamsApiType from '../../../types/paramsApiType';
 import ProductsCard from './card/ProductsCard';
+import IsLoading from '../../ui/isLoadind/IsLoading';
 
 const Products: React.FC = () => {
 
@@ -34,7 +35,7 @@ const Products: React.FC = () => {
     return (
         <S.container>
             {isLoading
-                ? (<div>is Loadind ...</div>)
+                ? <IsLoading />
                 : (<S.items>
                     {products.map((product) => (
                         <ProductsCard

@@ -19,8 +19,14 @@ const ProductItem: React.FC = () => {
 
     return (
         <div>
-            <IsLoading />
-            ProductItem
+            {isLoading && <IsLoading />}
+
+            {product && (
+                <div>
+                    <h1>{product.title}</h1>
+                    <p>{product.description}</p>
+                </div>
+            )}
         </div>
     );
 };
