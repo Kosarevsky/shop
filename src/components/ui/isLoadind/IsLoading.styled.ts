@@ -10,6 +10,15 @@ const spin = keyframes`
 `;
 
 const S = {
+    backdrop: styled.div`
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: ${({ theme }) => theme.colors.grey[1]};
+        opacity: 0.5;
+    `,
     spinner: styled.div`
         width: 50px;
         height: 50px;
