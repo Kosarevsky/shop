@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../store/store';
 import { productActions } from '../../../store/product/productSlice';
+import IsLoading from '../../ui/isLoadind/IsLoading';
 
 const ProductItem: React.FC = () => {
     const { id } = useParams();
@@ -18,6 +19,7 @@ const ProductItem: React.FC = () => {
 
     return (
         <div>
+            <IsLoading />
             ProductItem
         </div>
     );
