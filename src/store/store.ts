@@ -4,7 +4,8 @@ import { TypedUseSelectorHook } from "react-redux/es/types";
 import settingsReducer from "./settings/settingsSlice";
 import authReducer from "./settings/authSlice";
 import categoryReducer from "./category/categorySlice";
-import productsReducer from "./products/products.Slice";
+import productsReducer from "./products/productsSlice";
+import productReducer from "./product/productSlice";
 
 export const store = configureStore({
     reducer: {
@@ -12,6 +13,7 @@ export const store = configureStore({
         settings: settingsReducer,
         categories: categoryReducer,
         products: productsReducer,
+        product: productReducer,
     },
 });
 

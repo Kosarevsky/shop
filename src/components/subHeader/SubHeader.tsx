@@ -4,7 +4,7 @@ import useDebounceValue from '../hooks/useDebounceValue';
 import { useEffect, useState } from 'react';
 import { FormControl, InputAdornment } from '@mui/material';
 import ParamsApiType from '../../types/paramsApiType';
-import { productsAction } from '../../store/products/products.Slice';
+import { productsAction } from '../../store/products/productsSlice';
 import { useAppDispatch } from '../../store/store';
 import SubHeaderSearchingResult from './subHeaderSearchingResult/SubHeaderSearchResult';
 

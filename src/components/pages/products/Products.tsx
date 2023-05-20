@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import S from './Products.styled';
 import { useAppDispatch, useAppSelector } from '../../../store/store';
-import { productsAction } from '../../../store/products/products.Slice';
+import { productsAction } from '../../../store/products/productsSlice';
 import ParamsApiType from '../../../types/paramsApiType';
 import ProductsCard from './card/ProductsCard';
 
