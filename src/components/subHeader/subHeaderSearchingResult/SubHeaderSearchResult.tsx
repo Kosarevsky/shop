@@ -1,6 +1,7 @@
 import { useAppSelector } from '../../../store/store';
-import S from './SubHeaderSearchingResult.styled';
+import S from './SubHeaderSearchResult.styled';
 import { t } from 'i18next';
+import SubHeaderSearchResultCard from './card/SubHeaderSearchResultCard';
 
 interface ISubHeaderSearchResultPropsType {
     searchText: string;
@@ -12,9 +13,14 @@ const SubHeaderSearchingResult: React.FC<ISubHeaderSearchResultPropsType> = ({ s
     return (
         <S.container>
             <S.subContainer>
-                <h5>{t('subHeaderSearch.resultSearchQuery')}: {searchText}</h5>
+                <h5 style={{ padding: "0px 0px 20px" }}>
+                    {t("subHeaderSearch.resultSearchQuery")} : {searchText} ({t('search')} {foundProducts.length}{t('unit.pc')})
+                </h5>
+                {foundProducts && foundProducts.map((item) => (
+                    <SubHeaderSearchResultCard key={item.id} item={item} />
+                ))}
             </S.subContainer>
-        </S.container>
+        </S.container >
     );
 };
 

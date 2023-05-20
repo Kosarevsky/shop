@@ -4,6 +4,10 @@
     "part1": "Aby rozpocząć, edytuj plik App.js i zapisz go, aby ponownie załadować.",
     "part2": "Przełączaj język między angielskim a rosyjskim za pomocą przycisków powyżej."
   },
+  "search": "znaleziony",
+  "unit": {
+    "pc": "szt."
+  },
   "carousel": {
     "slide_one": {
       "title": "Świeża ryba z oceanów,",
@@ -16,9 +20,9 @@
     "slide_three": {
       "title": "Nic nie smakuje lepiej niż wędkowanie,",
       "text": "Ale oferujemy darmową dostawę."
-    },
-    "subHeaderSearch": {
-      "resultSearchQuery": "Wyniki dla"
     }
+  },
+  "subHeaderSearch": {
+    "resultSearchQuery": "Wyniki dla"
   }
 }

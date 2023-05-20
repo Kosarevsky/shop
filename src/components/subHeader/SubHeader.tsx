@@ -6,7 +6,7 @@ import { FormControl, InputAdornment } from '@mui/material';
 import ParamsApiType from '../../types/paramsApiType';
 import { productsAction } from '../../store/products/products.Slice';
 import { useAppDispatch } from '../../store/store';
-import SubHeaderSearchingResult from './subHeaderSearchingResult/SubHeaderSearchingResult';
+import SubHeaderSearchingResult from './subHeaderSearchingResult/SubHeaderSearchResult';
 
 const SubHeader = () => {
     const dispatch = useAppDispatch()
@@ -75,7 +75,7 @@ const SubHeader = () => {
                             }}
                         />
                         <div>
-                            <SubHeaderSearchingResult searchText={query} />
+                            {query.length > 0 && <SubHeaderSearchingResult searchText={query} />}
                         </div>
                     </FormControl>
                 </S.right>

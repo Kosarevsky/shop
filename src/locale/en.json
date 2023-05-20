@@ -4,6 +4,10 @@
     "part1": "To get started, edit App.js and save to reload.",
     "part2": "Switch language between english and russian using buttons above."
   },
+  "search": "found",
+  "unit": {
+    "pc": "pc."
+  },
   "carousel": {
     "slide_one": {
       "title": "Fresh fish from the oceans,",
