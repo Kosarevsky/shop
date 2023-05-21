@@ -22,7 +22,8 @@ const ProductsCard: React.FC<IProductsPropsType> = ({ item }) => {
                     </S.img>
                 </S.containerContent>
                 <S.containerContent>
-                    тут текст
+                    <h3>{item.title}</h3>
+                    <h4>{item.price}</h4>
                 </S.containerContent>
 
             </S.container >

@@ -9,9 +9,10 @@ const S = {
         width: 240px;
         background: black;
         position: relative;
-
+        flex-direction: column;
         cursor: pointer;
         border: 1px solid;
+        background-color: ${({ theme }) => theme.body};
 
         @media ${device.mobileM} {
             width: 180px;
@@ -23,6 +24,8 @@ const S = {
         object-fit: contain;
     `,
     containerContent: styled.div`
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;

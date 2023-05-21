@@ -12,7 +12,7 @@ interface IMenuLeftPropsType {
 
 const MenuLeft: React.FC<IMenuLeftPropsType> = ({ zIndex, position }) => {
     const categories = useAppSelector((state) => state.categories.categories);
-    const isLoading = useAppSelector((state) => state.categories.isLoading);
+    // const isLoading = useAppSelector((state) => state.categories.isLoading);
     const dispatch = useAppDispatch();
 
     const location = useLocation();
