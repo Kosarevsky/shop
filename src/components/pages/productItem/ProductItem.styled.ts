@@ -1,10 +1,15 @@
 import styled from "styled-components";
+import { device } from "../../../constant/device";
 
 const S = {
     container: styled.div`
         display: flex;
     `,
-    menu: styled.div``,
+    menu: styled.div`
+        @media ${device.tablet} {
+            display: none;
+        }
+    `,
 
     contentWrapper: styled.div`
         width: 100%;

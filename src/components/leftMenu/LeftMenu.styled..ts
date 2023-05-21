@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 const S = {
     container: styled.div`
-        display: flex;
-        flex-direction: column;
         width: 300px;
+        //background-color: ${({ theme }) => `${theme.backgroundColor}80`};
+        //padding: 10px 0 40px;
     `,
     title: styled.h4`
         margin-bottom: 10px;
