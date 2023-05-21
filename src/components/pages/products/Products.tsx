@@ -5,10 +5,11 @@ import { productsAction } from '../../../store/products/productsSlice';
 import ProductsCard from './card/ProductsCard';
 import IsLoading from '../../ui/isLoading/IsLoading';
 import ShopWrapper from '../../shopWrapper/ShopWrapper.styled';
-import MenuLeft from '../../menu/menuLeft/MenuLeft';
 import paramsApiProductsByCategoryIdType from '../../../types/paramsApiProductsByCategoryIdType';
 import { useLocation } from 'react-router-dom';
 import useDebounceValue from '../../hooks/useDebounceValue';
+import MenuLeft from '../../menu/menuLeft/MenuLeft';
+import { t } from 'i18next';
 
 const Products: React.FC = () => {
 
@@ -60,7 +61,9 @@ const Products: React.FC = () => {
                                 item={product}
                             />
                         ))}
+                        {products.length === 0 && <div>{t("not_found_product")}</div>}
                     </S.items>)}
+
             </S.container>
         </ShopWrapper>
     );

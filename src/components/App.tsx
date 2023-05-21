@@ -1,4 +1,3 @@
-import FavouritesPage from "./FavouritesPage";
 import { HomePage } from "./HomePage";
 import { ThemeProvider } from "styled-components";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
@@ -27,7 +26,6 @@ const App: React.FC = () => {
                             <Route path="/login" element={<Login />}></Route>
                             <Route path="/product/:id" element={<ProductItem />}></Route>
                             <Route path="/products" element={<Products />}></Route>
-                            <Route path="/favourites" element={<FavouritesPage />}></Route>
                             <Route path="*" element={<Navigate to="/" replace />} />
                         </Routes>
                     </BrowserRouter>
