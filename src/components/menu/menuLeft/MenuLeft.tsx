@@ -1,10 +1,15 @@
 import React, { useEffect } from 'react';
-import S from './LeftMenu.styled.';
+import S from './MenuLeft.styled.';
 import { t } from 'i18next'
-import { useAppDispatch, useAppSelector } from '../../store/store';
-import { categoryActions } from '../../store/category/categorySlice';
+import { useAppDispatch, useAppSelector } from '../../../store/store';
+import { categoryActions } from '../../../store/category/categorySlice';
 
-const LeftMenu: React.FC = () => {
+interface IMenuLeftPropsType {
+    zIndex?: number;
+    position?: string;
+}
+
+const MenuLeft: React.FC<IMenuLeftPropsType> = ({ zIndex, position }) => {
     const categories = useAppSelector((state) => state.categories.categories);
     const isLoading = useAppSelector((state) => state.categories.isLoading);
     const dispatch = useAppDispatch();
@@ -14,7 +19,8 @@ const LeftMenu: React.FC = () => {
     }, [])
 
     return (
-        <S.container>
+
+        <S.container zIndex={zIndex} position={position}>
             <S.title>
                 {t("left_menu.title")}
             </S.title>
@@ -32,4 +38,4 @@ const LeftMenu: React.FC = () => {
 }
 
 
-export default LeftMenu;
+export default MenuLeft;

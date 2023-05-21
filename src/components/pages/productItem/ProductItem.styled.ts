@@ -15,14 +15,18 @@ const S = {
         width: 100%;
     `,
 
-    content: styled.div`
-        display: flex;
-    `,
     containerIcon: styled.div`
         max-width: 200px;
         padding: 20px;
     `,
-    description: styled.div``,
+    description: styled.div`
+        @media ${device.tablet} {
+            font-size: 12px;
+        }
+        @media ${device.mobileL} {
+            font-size: 10px;
+        }
+    `,
     img: styled.img`
         max-width: 100%;
     `,
