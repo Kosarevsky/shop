@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../../store/store';
 import { productsAction } from '../../../store/products/productsSlice';
 import ParamsApiType from '../../../types/paramsApiType';
 import ProductsCard from './card/ProductsCard';
-import IsLoading from '../../ui/isLoadind/IsLoading';
+import IsLoading from '../../ui/isLoading/IsLoading';
 
 const Products: React.FC = () => {
 

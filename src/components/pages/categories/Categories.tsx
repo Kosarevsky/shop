@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from '../../../store/store';
 import { categoryActions } from '../../../store/category/categorySlice';
 import S from './Categories.styled';
 import CategoryCard from './card/CategoryCard';
-import IsLoading from '../../ui/isLoadind/IsLoading';
+import IsLoading from '../../ui/isLoading/IsLoading';
 
 const Categories: React.FC = () => {
     const categories = useAppSelector((state) => state.categories.categories);

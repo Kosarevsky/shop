@@ -5,6 +5,7 @@
     "part2": "Przełączaj język między angielskim a rosyjskim za pomocą przycisków powyżej."
   },
   "search": "znaleziony",
+  "price": "cena",
   "unit": {
     "pc": "szt."
   },
@@ -24,5 +25,8 @@
   },
   "subHeaderSearch": {
     "resultSearchQuery": "Wyniki dla"
+  },
+  "left_menu": {
+    "title": "menu"
   }
 }

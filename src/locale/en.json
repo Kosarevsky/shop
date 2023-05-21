@@ -5,6 +5,7 @@
     "part2": "Switch language between english and russian using buttons above."
   },
   "search": "found",
+  "price": "price",
   "unit": {
     "pc": "pc."
   },
@@ -24,5 +25,8 @@
   },
   "subHeaderSearch": {
     "resultSearchQuery": "Results for"
+  },
+  "left_menu": {
+    "title": "menu"
   }
 }

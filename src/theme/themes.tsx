@@ -7,7 +7,7 @@ declare module "styled-components" {
 export const lightTheme: ThemeType = {
     body: "#FFF",
     text: "#363537",
-    toggleBorder: "#FFF",
+    toggleBorder: "#363537",
     backgroundColor: "#276E9A",
     header: {
         color: "#FFF",
@@ -34,7 +34,7 @@ export const lightTheme: ThemeType = {
 export const darkTheme: ThemeType = {
     body: "#363537",
     text: "#FAFAFA",
-    toggleBorder: "#6B8096",
+    toggleBorder: "#FAFAFA",
     backgroundColor: "#276E9A",
     header: {
         color: "#FFF",

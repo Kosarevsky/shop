@@ -2,7 +2,7 @@ import { useAppSelector } from '../../../store/store';
 import S from './SubHeaderSearchResult.styled';
 import { t } from 'i18next';
 import SubHeaderSearchResultCard from './card/SubHeaderSearchResultCard';
-import IsLoading from '../../ui/isLoadind/IsLoading';
+import IsLoading from '../../ui/isLoading/IsLoading';
 
 interface ISubHeaderSearchResultPropsType {
     searchText: string;
