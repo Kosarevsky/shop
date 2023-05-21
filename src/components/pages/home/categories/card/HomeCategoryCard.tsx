@@ -1,18 +1,17 @@
 import React from 'react';
-import CategoryType from '../../../../types/categoriesTypes';
-import S from './CategoryCard.styled';
+import CategoryType from '../../../../../types/categoriesTypes';
+import S from './HomeCategoryCard.styled';
 import { useNavigate } from 'react-router-dom';
 
 interface PropsType {
     dataItem: CategoryType;
 }
 
-const CategoryCard: React.FC<PropsType> = ({ dataItem }) => {
+const HomeCategoryCard: React.FC<PropsType> = ({ dataItem }) => {
 
     const navigate = useNavigate()
     const handleClick = () => {
-        navigate('/products/');
-        // navigate(`/products/${dataItem.id}`)
+        navigate(`/products/?c=${dataItem.id}`)
     }
 
     return (
@@ -24,4 +23,4 @@ const CategoryCard: React.FC<PropsType> = ({ dataItem }) => {
     );
 };
 
-export default CategoryCard;
+export default HomeCategoryCard;

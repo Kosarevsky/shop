@@ -8,6 +8,8 @@ import { productsAction } from '../../store/products/productsSlice';
 import { useAppDispatch } from '../../store/store';
 import SubHeaderSearchingResult from './subHeaderSearchingResult/SubHeaderSearchResult';
 import MenuLeft from '../menu/menuLeft/MenuLeft';
+import { useLocation } from 'react-router-dom';
+import paramsApiProductsByCategoryIdType from '../../types/paramsApiProductsByCategoryIdType';
 
 const SubHeader = () => {
     const dispatch = useAppDispatch()
@@ -17,6 +19,11 @@ const SubHeader = () => {
     const [query, debounceQuery, setQuery] = useDebounceValue("", 500);
     const [isSearchHovered, setIsSearchHovered] = useState(false);
     const [isMenuHovered, setIsMenuHovered] = useState(false);
+
+
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const categoryId = +(searchParams.get('c') ?? 0);
 
     const handleClick = (): void => {
         setQuery('')
@@ -61,8 +68,25 @@ const SubHeader = () => {
         }));
     };
 
+    const fetchDataWithCategory = (filter: Partial<paramsApiProductsByCategoryIdType> = {}) => {
+        dispatch(productsAction.getProductByCategoryId({
+            sortField,
+            sortDir,
+            query: debounceQuery,
+            limit: 12,
+            page,
+            categoryId,
+            ...filter,
+        }));
+    };
+
     useEffect(() => {
-        fetchData();
+        if (categoryId > 1) {
+            fetchDataWithCategory()
+        } else {
+            fetchData();
+        }
+
         setTrueIsSearchHovered();
     }, [debounceQuery]);
 

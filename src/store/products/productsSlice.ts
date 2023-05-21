@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { ProductType } from "../../types/productType";
 import paramsApiType from "../../types/paramsApiType";
 import productsApi from "../../api/products/productsApi";
+import paramsApiProductsByCategoryIdType from "../../types/paramsApiProductsByCategoryIdType";
 
 interface ProductStateType {
     products: ProductType[];
@@ -28,6 +29,19 @@ const getProducts = createAsyncThunk<
     }
 });
 
+const getProductByCategoryId = createAsyncThunk<
+    ProductType[],
+    paramsApiProductsByCategoryIdType,
+    { rejectValue: string }
+>("products/getProductByCategoryId", async (data, thunksApi) => {
+    try {
+        const response = await productsApi.getProductByCategoryId(data);
+        return response.data;
+    } catch {
+        return thunksApi.rejectWithValue("Server error");
+    }
+});
+
 const productsSlice = createSlice({
     name: "products",
     initialState,
@@ -45,12 +59,32 @@ const productsSlice = createSlice({
             state.isLoading = false;
             state.products = payload;
         });
+
+        builder.addCase(getProductByCategoryId.pending, (state) => {
+            state.isLoading = true;
+            state.error = undefined;
+        });
+        builder.addCase(
+            getProductByCategoryId.rejected,
+            (state, { payload }) => {
+                state.isLoading = false;
+                state.error = payload;
+            }
+        );
+        builder.addCase(
+            getProductByCategoryId.fulfilled,
+            (state, { payload }) => {
+                state.isLoading = false;
+                state.products = payload;
+            }
+        );
     },
 });
 
 export const productsAction = {
     ...productsSlice.actions,
     getProducts,
+    getProductByCategoryId,
 };
 
 const productsReducer = productsSlice.reducer;

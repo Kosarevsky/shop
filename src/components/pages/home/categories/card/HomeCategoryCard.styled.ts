@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../../../constant/device";
+import { device } from "../../../../../constant/device";
 
 interface IProps {
     img: string;

@@ -1,13 +1,27 @@
 import styled from "styled-components";
+import { device } from "../../../constant/device";
 
 const S = {
-    container: styled.div``,
+    container: styled.div`
+        display: flex;
+        padding-top: 10px;
+    `,
+
+    menu: styled.div`
+        display: flex;
+        @media ${device.tablet} {
+            display: none;
+        }
+    `,
     items: styled.div`
-        flex-wrap: wrap;
-        width: 20%;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0 auto;
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 5px;
+        justify-items: center;
+        @media ${device.mobileM} {
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        }
     `,
 };
 

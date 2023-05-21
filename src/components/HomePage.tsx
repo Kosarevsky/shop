@@ -1,6 +1,6 @@
 import '../utils/i18nConfig'
 import CarouselComponent from './carousel/Carousel';
-import Categories from './pages/categories/Categories';
+import Categories from './pages/home/categories/HomeCategories';
 import ShopWrapper from './shopWrapper/ShopWrapper.styled';
 
 export const HomePage = () => {

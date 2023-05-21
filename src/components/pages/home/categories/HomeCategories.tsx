@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../store/store';
-import { categoryActions } from '../../../store/category/categorySlice';
-import S from './Categories.styled';
-import CategoryCard from './card/CategoryCard';
-import IsLoading from '../../ui/isLoading/IsLoading';
+import { useAppDispatch, useAppSelector } from '../../../../store/store';
+import { categoryActions } from '../../../../store/category/categorySlice';
+import S from './HomeCategories.styled';
+import CategoryCard from './card/HomeCategoryCard';
+import IsLoading from '../../../ui/isLoading/IsLoading';
 
-const Categories: React.FC = () => {
+const HomeCategories: React.FC = () => {
     const categories = useAppSelector((state) => state.categories.categories);
     const isLoading = useAppSelector((state) => state.categories.isLoading);
     const dispatch = useAppDispatch()
@@ -33,5 +33,5 @@ const Categories: React.FC = () => {
     );
 };
 
-export default Categories;
+export default HomeCategories;
 

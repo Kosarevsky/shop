@@ -1,23 +1,31 @@
 import styled from "styled-components";
+import { device } from "../../../../constant/device";
 
 const S = {
     container: styled.div`
-        padding: 10px;
-        height: auto;
-        flex: 0 0 calc(33.33% - 20px);
-        margin: 10px;
-        &:hover {
-            border: 1px solid ${({ theme }) => theme.text};
+        border-radius: 5px;
+        overflow: hidden;
+        height: 330px;
+        width: 240px;
+        background: black;
+        position: relative;
+
+        cursor: pointer;
+        border: 1px solid;
+
+        @media ${device.mobileM} {
+            width: 180px;
         }
     `,
     img: styled.img`
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
     `,
     containerContent: styled.div`
-        width: 100%;
-        height: 50%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     `,
 };
 
