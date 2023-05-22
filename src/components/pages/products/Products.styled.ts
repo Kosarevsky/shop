@@ -9,9 +9,9 @@ const S = {
 
     menu: styled.div`
         width: 300px;
-        /* @media ${device.tablet} {
+        @media ${device.tablet} {
             display: none;
-        } */
+        }
     `,
     items: styled.div`
         display: grid;

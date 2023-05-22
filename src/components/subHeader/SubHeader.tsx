@@ -30,8 +30,6 @@ const SubHeader: React.FC<ISubHeaderPropsType> = ({ showOnlySearchString }) => {
     const searchParams = new URLSearchParams(location.search);
     const categoryId = +(searchParams.get('c') ?? 0);
 
-    // const isLoading = useAppSelector((state) => state.categories.isLoading);
-
 
     const handleClick = (): void => {
         setQuery('')

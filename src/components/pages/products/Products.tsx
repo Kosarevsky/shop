@@ -18,7 +18,7 @@ const Products: React.FC = () => {
             <ShopWrapper>
 
                 <S.container>
-                    <S.menu style={{ width: "300px;" }}>
+                    <S.menu >
                     </S.menu>
 
                     {isLoading
