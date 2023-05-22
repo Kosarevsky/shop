@@ -1,8 +1,8 @@
-import { useAppSelector } from '../../../store/store';
+import { useAppSelector } from '../../../../store/store';
 import S from './SubHeaderSearchResult.styled';
 import { t } from 'i18next';
 import SubHeaderSearchResultCard from './card/SubHeaderSearchResultCard';
-import IsLoading from '../../ui/isLoading/IsLoading';
+import IsLoading from '../../../ui/isLoading/IsLoading';
 
 interface ISubHeaderSearchResultPropsType {
     searchText: string;

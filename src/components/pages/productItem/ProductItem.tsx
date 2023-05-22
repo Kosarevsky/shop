@@ -7,7 +7,7 @@ import S from './ProductItem.styled';
 import { t } from "i18next"
 import ShopWrapper from '../../shopWrapper/ShopWrapper.styled';
 import MenuLeft from '../../menu/menuLeft/MenuLeft';
-import SubHeader from '../../subHeader/SubHeader';
+import SubHeader from '../../header/subHeader/SubHeader';
 
 const ProductItem: React.FC = () => {
     const { id } = useParams();

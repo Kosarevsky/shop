@@ -1,15 +1,15 @@
-import ShopWrapper from '../shopWrapper/ShopWrapper.styled';
-import S, { StyledGiHamburgerMenu, StyledGoSearch, StyledMdClear, StyledTextField } from './SubHeader.styled';
-import useDebounceValue from '../hooks/useDebounceValue';
+import ShopWrapper from '../../shopWrapper/ShopWrapper.styled';
+import S, { StyledGiHamburgerMenu, StyledGoSearch, StyledMdClear, StyledPagination, StyledTextField } from './SubHeader.styled';
+import useDebounceValue from '../../hooks/useDebounceValue';
 import { useEffect, useState } from 'react';
-import { FormControl, InputAdornment } from '@mui/material';
-import ParamsApiType from '../../types/paramsApiType';
-import { productsAction } from '../../store/products/productsSlice';
-import { useAppDispatch } from '../../store/store';
+import { FormControl, InputAdornment, Pagination } from '@mui/material';
+import ParamsApiType from '../../../types/paramsApiType';
+import { productsAction } from '../../../store/products/productsSlice';
+import { useAppDispatch } from '../../../store/store';
 import SubHeaderSearchingResult from './subHeaderSearchingResult/SubHeaderSearchResult';
-import MenuLeft from '../menu/menuLeft/MenuLeft';
+import MenuLeft from '../../menu/menuLeft/MenuLeft';
 import { useLocation } from 'react-router-dom';
-import paramsApiProductsByCategoryIdType from '../../types/paramsApiProductsByCategoryIdType';
+import paramsApiProductsByCategoryIdType from '../../../types/paramsApiProductsByCategoryIdType';
 import { t } from 'i18next';
 
 
@@ -61,6 +61,16 @@ const SubHeader: React.FC<ISubHeaderPropsType> = ({ showOnlySearchString }) => {
         const value = event.target.value;
         setQuery(value);
         setShowClearIcon(event.target.value === "" ? "none" : "flex");
+    };
+
+    const handlePaginationChange = (event: React.ChangeEvent<unknown>, page: number) => {
+        setPage(page);
+
+        if (categoryId > 1) {
+            fetchDataWithCategory({ page: page, categoryId: categoryId });
+        } else {
+            fetchData({ page: page });
+        }
     };
 
     const fetchData = (filter: Partial<ParamsApiType> = {}) => {
@@ -155,6 +165,15 @@ const SubHeader: React.FC<ISubHeaderPropsType> = ({ showOnlySearchString }) => {
                     <S.filter>
                         <S.filterTitle>
                             <h2>{t('view_options')}</h2>
+                            <StyledPagination
+                                count={10}
+                                size="large"
+                                page={page}
+                                variant="outlined"
+                                shape="rounded"
+                                color="primary"
+                                onChange={handlePaginationChange}
+                            />
                         </S.filterTitle>
                         <h3>
                         </h3>

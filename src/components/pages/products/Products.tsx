@@ -5,7 +5,7 @@ import IsLoading from '../../ui/isLoading/IsLoading';
 import ShopWrapper from '../../shopWrapper/ShopWrapper.styled';
 import { t } from 'i18next';
 import { useAppSelector } from '../../../store/store';
-import SubHeader from '../../subHeader/SubHeader';
+import SubHeader from '../../header/subHeader/SubHeader';
 
 const Products: React.FC = () => {
 

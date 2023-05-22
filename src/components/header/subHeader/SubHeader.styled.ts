@@ -2,8 +2,9 @@ import TextField from "@mui/material/TextField";
 import { GoSearch } from "react-icons/go";
 import { MdClear } from "react-icons/md";
 import styled, { css } from "styled-components";
-import { device } from "../../constant/device";
+import { device } from "../../../constant/device";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Pagination } from "@mui/material";
 
 const styles = {
     icon: css`
@@ -57,7 +58,9 @@ const S = {
         text-align: center;
         padding: 30px;
     `,
-    filterTitle: styled.div``,
+    filterTitle: styled.div`
+        height: 100%;
+    `,
 };
 
 export const StyledGiHamburgerMenu = styled(GiHamburgerMenu)`
@@ -94,6 +97,17 @@ export const StyledGoSearch = styled(GoSearch)`
 
 export const StyledMdClear = styled(MdClear)`
     color: ${({ theme }) => theme.text};
+`;
+
+export const StyledPagination = styled(Pagination)`
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-top: 20px;
+    & .MuiPaginationItem-root {
+        color: ${({ theme }) => theme.text};
+        border-color: ${({ theme }) => theme.text};
+    }
 `;
 
 export default S;
