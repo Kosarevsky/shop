@@ -1,5 +1,5 @@
 import ShopWrapper from '../../shopWrapper/ShopWrapper.styled';
-import S, { StyledGiHamburgerMenu, StyledGoSearch, StyledMdClear, StyledPagination, StyledTextField } from './SubHeader.styled';
+import S, { StyledGiHamburgerMenu, StyledGoSearch, StyledMdClear, StyledPagination, StyledSelect, StyledTextField } from './SubHeader.styled';
 import useDebounceValue from '../../hooks/useDebounceValue';
 import { useEffect, useState } from 'react';
 import ParamsApiType from '../../../types/paramsApiType';
@@ -11,7 +11,6 @@ import { useLocation } from 'react-router-dom';
 import paramsApiProductsByCategoryIdType from '../../../types/paramsApiProductsByCategoryIdType';
 import { t } from 'i18next';
 import { FormControl, InputAdornment, MenuItem, SelectChangeEvent } from '@mui/material';
-import StyledSelect from '../switchLanguage/SwitchLanguage.styled';
 
 
 interface ISubHeaderPropsType {

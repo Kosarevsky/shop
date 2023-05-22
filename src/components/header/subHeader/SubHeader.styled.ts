@@ -4,7 +4,7 @@ import { MdClear } from "react-icons/md";
 import styled, { css } from "styled-components";
 import { device } from "../../../constant/device";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Pagination } from "@mui/material";
+import { Pagination, Select } from "@mui/material";
 
 const styles = {
     icon: css`
@@ -70,6 +70,20 @@ const S = {
     `,
 };
 
+export const StyledSelect = styled(Select)`
+    && {
+        margin: 4px;
+        padding-right: 1rem;
+        color: ${({ theme }) => theme.text};
+        .MuiOutlinedInput-notchedOutline {
+            border-width: 1px !important;
+            border-color: ${({ theme }) => theme.text} !important;
+        }
+        .MuiSelect-icon {
+            color: ${({ theme }) => theme.text};
+        }
+    }
+`;
 export const StyledGiHamburgerMenu = styled(GiHamburgerMenu)`
     ${styles.icon};
     display: none;
