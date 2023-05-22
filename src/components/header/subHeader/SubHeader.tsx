@@ -32,10 +32,12 @@ const SubHeader: React.FC<ISubHeaderPropsType> = ({ showOnlySearchString }) => {
 
 
     const handleSetSortField = (e: SelectChangeEvent<unknown>) => {
+        setPage(1);
         setSortField(e.target.value as string);
     };
 
     const handleSetSortDirField = (e: SelectChangeEvent<unknown>) => {
+        setPage(1);
         setSortDir(e.target.value as string);
     };
 
@@ -87,7 +89,7 @@ const SubHeader: React.FC<ISubHeaderPropsType> = ({ showOnlySearchString }) => {
             sortField,
             sortDir,
             query: debounceQuery,
-            limit: 12,
+            limit: 6,
             page,
             ...filter,
         }));
@@ -98,7 +100,7 @@ const SubHeader: React.FC<ISubHeaderPropsType> = ({ showOnlySearchString }) => {
             sortField,
             sortDir,
             query: debounceQuery,
-            limit: 12,
+            limit: 6,
             page,
             categoryId,
             ...filter,
