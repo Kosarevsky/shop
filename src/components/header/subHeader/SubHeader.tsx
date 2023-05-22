@@ -59,6 +59,7 @@ const SubHeader: React.FC<ISubHeaderPropsType> = ({ showOnlySearchString }) => {
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const value = event.target.value;
+        setPage(1);
         setQuery(value);
         setShowClearIcon(event.target.value === "" ? "none" : "flex");
     };
