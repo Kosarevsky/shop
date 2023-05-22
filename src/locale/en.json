@@ -25,5 +25,6 @@
     "title": "menu"
   },
   "not_found_product": "Fish not found. sorry",
-  "view_options": "View Options"
+  "view_options": "View Options",
+  "currency": "$"
 }

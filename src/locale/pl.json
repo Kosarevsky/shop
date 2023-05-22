@@ -25,5 +25,6 @@
     "title": "menu"
   },
   "not_found_product": "Nie ma tu ryb. Przeprasham",
-  "view_options": "OPCJE PRZEGLĄDANIA"
+  "view_options": "OPCJE PRZEGLĄDANIA",
+  "currency": "zl"
 }

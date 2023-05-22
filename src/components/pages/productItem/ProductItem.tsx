@@ -8,6 +8,7 @@ import { t } from "i18next"
 import ShopWrapper from '../../shopWrapper/ShopWrapper.styled';
 import MenuLeft from '../../menu/menuLeft/MenuLeft';
 import SubHeader from '../../header/subHeader/SubHeader';
+import Rating from '@mui/material/Rating/Rating';
 
 const ProductItem: React.FC = () => {
     const { id } = useParams();
@@ -41,7 +42,9 @@ const ProductItem: React.FC = () => {
                                     </S.containerIcon>
                                     <S.description>
                                         <h2>{product.description}</h2>
-                                        <h3>{t('price')}: {product.price}</h3>
+                                        <h3>{product.price}{t('currency')}</h3>
+
+                                        <Rating name="read-only" value={product.rating ?? 1} readOnly />
                                     </S.description>
                                 </S.container>
                             </S.contentWrapper>
