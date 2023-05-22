@@ -26,5 +26,13 @@
   },
   "not_found_product": "Fish not found. sorry",
   "view_options": "View Options",
-  "currency": "$"
+  "currency": "$",
+  "filter": {
+    "default": "Default",
+    "name": "By name",
+    "price": "By price",
+    "rating": "By rating",
+    "asc": "asc",
+    "desc": "desc"
+  }
 }

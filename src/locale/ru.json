@@ -26,5 +26,13 @@
   },
   "not_found_product": "Тут рыбы нет. Сорян",
   "view_options": "Параметры просмотра",
-  "currency": ".руб"
+  "currency": ".руб",
+  "filter": {
+    "default": "По умолчанию",
+    "name": "По наименованию",
+    "price": "По цене",
+    "rating": "По рейтингу",
+    "asc": "asc",
+    "desc": "desc"
+  }
 }

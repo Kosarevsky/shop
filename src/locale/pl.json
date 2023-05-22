@@ -26,5 +26,13 @@
   },
   "not_found_product": "Nie ma tu ryb. Przeprasham",
   "view_options": "OPCJE PRZEGLĄDANIA",
-  "currency": "zl"
+  "currency": "zl",
+  "filter": {
+    "default": "Domyślny",
+    "name": "Wg nazwy",
+    "price": "według ceny",
+    "rating": "według oceny",
+    "asc": "asc",
+    "desc": "desc"
+  }
 }

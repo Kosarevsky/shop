@@ -2,7 +2,6 @@ import ShopWrapper from '../../shopWrapper/ShopWrapper.styled';
 import S, { StyledGiHamburgerMenu, StyledGoSearch, StyledMdClear, StyledPagination, StyledTextField } from './SubHeader.styled';
 import useDebounceValue from '../../hooks/useDebounceValue';
 import { useEffect, useState } from 'react';
-import { FormControl, InputAdornment, Pagination } from '@mui/material';
 import ParamsApiType from '../../../types/paramsApiType';
 import { productsAction } from '../../../store/products/productsSlice';
 import { useAppDispatch } from '../../../store/store';
@@ -11,6 +10,8 @@ import MenuLeft from '../../menu/menuLeft/MenuLeft';
 import { useLocation } from 'react-router-dom';
 import paramsApiProductsByCategoryIdType from '../../../types/paramsApiProductsByCategoryIdType';
 import { t } from 'i18next';
+import { FormControl, InputAdornment, MenuItem, SelectChangeEvent } from '@mui/material';
+import StyledSelect from '../switchLanguage/SwitchLanguage.styled';
 
 
 interface ISubHeaderPropsType {
@@ -18,7 +19,7 @@ interface ISubHeaderPropsType {
 }
 const SubHeader: React.FC<ISubHeaderPropsType> = ({ showOnlySearchString }) => {
     const dispatch = useAppDispatch()
-    const [sortField, setSortField] = useState('id');
+    const [sortField, setSortField] = useState('title');
     const [sortDir, setSortDir] = useState('desc');
     const [page, setPage] = useState(1);
     const [query, debounceQuery, setQuery] = useDebounceValue("", 500);
@@ -30,6 +31,14 @@ const SubHeader: React.FC<ISubHeaderPropsType> = ({ showOnlySearchString }) => {
     const searchParams = new URLSearchParams(location.search);
     const categoryId = +(searchParams.get('c') ?? 0);
 
+
+    const handleSetSortField = (e: SelectChangeEvent<unknown>) => {
+        setSortField(e.target.value as string);
+    };
+
+    const handleSetSortDirField = (e: SelectChangeEvent<unknown>) => {
+        setSortDir(e.target.value as string);
+    };
 
     const handleClick = (): void => {
         setQuery('')
@@ -105,7 +114,7 @@ const SubHeader: React.FC<ISubHeaderPropsType> = ({ showOnlySearchString }) => {
         }
 
         setTrueIsSearchHovered();
-    }, [debounceQuery]);
+    }, [debounceQuery, sortDir, sortField]);
 
     return (
         <ShopWrapper>
@@ -166,6 +175,33 @@ const SubHeader: React.FC<ISubHeaderPropsType> = ({ showOnlySearchString }) => {
                     <S.filter>
                         <S.filterTitle>
                             <h2>{t('view_options')}</h2>
+                            <S.sort>
+                                <StyledSelect
+                                    labelId="select-sorting-fish-label"
+                                    id="select-sorting-fish"
+                                    value={sortField}
+                                    label="Age"
+                                    autoWidth
+                                    onChange={handleSetSortField}
+                                >
+                                    <MenuItem value="title">{t("filter.default")}</MenuItem>
+                                    <MenuItem value="name">{t("filter.name")}</MenuItem>
+                                    <MenuItem value="price">{t("filter.price")}</MenuItem>
+                                    <MenuItem value="rating">{t("filter.rating")}</MenuItem>
+                                </StyledSelect>
+                                <StyledSelect
+                                    labelId="select-sorting-asc-fish-label"
+                                    id="select-sorting-asc-fish"
+                                    value={sortField}
+                                    label="Age"
+                                    autoWidth
+                                    onChange={handleSetSortDirField}
+                                >
+                                    <MenuItem value="asc">{t("filter.asc")}</MenuItem>
+                                    <MenuItem value="desc">{t("filter.desc")}</MenuItem>
+                                </StyledSelect>
+
+                            </S.sort>
                             <StyledPagination
                                 count={10}
                                 size="large"

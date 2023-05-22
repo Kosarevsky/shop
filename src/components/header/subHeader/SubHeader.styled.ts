@@ -64,6 +64,10 @@ const S = {
         justify-content: space-between;
         height: 100%;
     `,
+    sort: styled.div`
+        display: flex;
+        justify-content: end;
+    `,
 };
 
 export const StyledGiHamburgerMenu = styled(GiHamburgerMenu)`
