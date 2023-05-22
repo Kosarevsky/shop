@@ -180,7 +180,7 @@ const SubHeader: React.FC<ISubHeaderPropsType> = ({ showOnlySearchString }) => {
                                     labelId="select-sorting-fish-label"
                                     id="select-sorting-fish"
                                     value={sortField}
-                                    label="Age"
+                                    label="Age1"
                                     autoWidth
                                     onChange={handleSetSortField}
                                 >
@@ -192,8 +192,8 @@ const SubHeader: React.FC<ISubHeaderPropsType> = ({ showOnlySearchString }) => {
                                 <StyledSelect
                                     labelId="select-sorting-asc-fish-label"
                                     id="select-sorting-asc-fish"
-                                    value={sortField}
-                                    label="Age"
+                                    value={sortDir}
+                                    label="Age2"
                                     autoWidth
                                     onChange={handleSetSortDirField}
                                 >
