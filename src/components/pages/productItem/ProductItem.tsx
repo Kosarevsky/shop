@@ -7,6 +7,7 @@ import S from './ProductItem.styled';
 import { t } from "i18next"
 import ShopWrapper from '../../shopWrapper/ShopWrapper.styled';
 import MenuLeft from '../../menu/menuLeft/MenuLeft';
+import SubHeader from '../../subHeader/SubHeader';
 
 const ProductItem: React.FC = () => {
     const { id } = useParams();
@@ -21,31 +22,34 @@ const ProductItem: React.FC = () => {
     }, [id]);
 
     return (
-        <ShopWrapper>
-            {isLoading && <IsLoading />}
+        <>
+            <SubHeader showOnlySearchString={true} />
+            <ShopWrapper>
+                {isLoading && <IsLoading />}
 
-            {product && (
-                <>
-                    <S.container>
-                        <S.menu>
-                            <MenuLeft />
-                        </S.menu>
-                        <S.contentWrapper>
-                            <h1>{product.title}</h1>
-                            <S.container>
-                                <S.containerIcon>
-                                    <S.img src={product.images[0].toString()} alt={product.title} />
-                                </S.containerIcon>
-                                <S.description>
-                                    <h2>{product.description}</h2>
-                                    <h3>{t('price')}: {product.price}</h3>
-                                </S.description>
-                            </S.container>
-                        </S.contentWrapper>
-                    </S.container>
-                </>
-            )}
-        </ShopWrapper>
+                {product && (
+                    <>
+                        <S.container>
+                            <S.menu>
+                                <MenuLeft />
+                            </S.menu>
+                            <S.contentWrapper>
+                                <h1>{product.title}</h1>
+                                <S.container>
+                                    <S.containerIcon>
+                                        <S.img src={product.images[0].toString()} alt={product.title} />
+                                    </S.containerIcon>
+                                    <S.description>
+                                        <h2>{product.description}</h2>
+                                        <h3>{t('price')}: {product.price}</h3>
+                                    </S.description>
+                                </S.container>
+                            </S.contentWrapper>
+                        </S.container>
+                    </>
+                )}
+            </ShopWrapper>
+        </>
     );
 };
 

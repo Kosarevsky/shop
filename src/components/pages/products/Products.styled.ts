@@ -8,10 +8,10 @@ const S = {
     `,
 
     menu: styled.div`
-        display: flex;
-        @media ${device.tablet} {
+        width: 300px;
+        /* @media ${device.tablet} {
             display: none;
-        }
+        } */
     `,
     items: styled.div`
         display: grid;

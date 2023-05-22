@@ -6,7 +6,6 @@ import { useAppSelector } from "../store/store";
 import { GlobalStyles } from "./GlobalStyles";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import Login from "./header/login/Login";
-import SubHeader from "./subHeader/SubHeader";
 import ProductItem from "./pages/productItem/ProductItem";
 import Products from "./pages/products/Products";
 
@@ -20,7 +19,7 @@ const App: React.FC = () => {
                     <GlobalStyles />
                     <BrowserRouter>
                         <Header />
-                        <SubHeader />
+                        {/* <SubHeader /> */}
                         <Routes>
                             <Route path="/" element={<HomePage />}></Route>
                             <Route path="/login" element={<Login />}></Route>

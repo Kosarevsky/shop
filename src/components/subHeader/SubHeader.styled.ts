@@ -41,6 +41,23 @@ const S = {
     `,
     logo: styled.div``,
     logoImg: styled.img``,
+
+    containerBottom: styled.div`
+        display: flex;
+        width: 100%;
+    `,
+    menu: styled.div`
+        display: flex;
+        @media ${device.tablet} {
+            display: none;
+        }
+    `,
+    filter: styled.div`
+        width: 100%;
+        text-align: center;
+        padding: 30px;
+    `,
+    filterTitle: styled.div``,
 };
 
 export const StyledGiHamburgerMenu = styled(GiHamburgerMenu)`

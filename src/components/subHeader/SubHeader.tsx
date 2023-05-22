@@ -10,8 +10,13 @@ import SubHeaderSearchingResult from './subHeaderSearchingResult/SubHeaderSearch
 import MenuLeft from '../menu/menuLeft/MenuLeft';
 import { useLocation } from 'react-router-dom';
 import paramsApiProductsByCategoryIdType from '../../types/paramsApiProductsByCategoryIdType';
+import { t } from 'i18next';
 
-const SubHeader = () => {
+
+interface ISubHeaderPropsType {
+    showOnlySearchString: boolean;
+}
+const SubHeader: React.FC<ISubHeaderPropsType> = ({ showOnlySearchString }) => {
     const dispatch = useAppDispatch()
     const [sortField, setSortField] = useState('id');
     const [sortDir, setSortDir] = useState('desc');
@@ -24,6 +29,9 @@ const SubHeader = () => {
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const categoryId = +(searchParams.get('c') ?? 0);
+
+    // const isLoading = useAppSelector((state) => state.categories.isLoading);
+
 
     const handleClick = (): void => {
         setQuery('')
@@ -139,6 +147,22 @@ const SubHeader = () => {
                     </li>
                 </S.ul>
             </S.container>
+
+            {!showOnlySearchString &&
+                (<S.containerBottom>
+                    <S.menu>
+                        <MenuLeft></MenuLeft>
+                    </S.menu>
+
+                    <S.filter>
+                        <S.filterTitle>
+                            <h2>{t('view_options')}</h2>
+                        </S.filterTitle>
+                        <h3>
+                        </h3>
+                    </S.filter>
+                </S.containerBottom>)
+            }
         </ShopWrapper>
     );
 };
